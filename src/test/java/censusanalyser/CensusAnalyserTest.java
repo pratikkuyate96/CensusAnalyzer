@@ -83,20 +83,20 @@ public class CensusAnalyserTest {
             Assert.assertEquals(29,numOfRecords);
         } catch (CensusAnalyserException e) { }
     }
-//
-//    //tc2.2
-//    @Test
-//    public void givenIndiaStoreData_WithWrongFile_ShouldThrowException() {
-//        try {
-//            CensusAnalyser censusAnalyser = new CensusAnalyser();
-//            ExpectedException exceptionRule = ExpectedException.none();
-//            exceptionRule.expect(CensusAnalyserException.class);
-//            censusAnalyser.loadIndiaStateCodeData(WRONG_CSV_FILE_PATH);
-//        } catch (CensusAnalyserException e) {
-//            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM,e.type);
-//        }
-//    }
-//
+
+    //tc2.2
+    @Test
+    public void givenIndiaStoreData_WithWrongFile_ShouldThrowException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            ExpectedException exceptionRule = ExpectedException.none();
+            exceptionRule.expect(CensusAnalyserException.class);
+            censusAnalyser.loadIndiaStateCodeData(WRONG_CSV_FILE_PATH);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM,e.type);
+        }
+    }
+
 //    //tc2.3
 //    @Test
 //    public void givenStateStoreCsvFile_WhenTypeIncorrect_shouldReturnException() {
