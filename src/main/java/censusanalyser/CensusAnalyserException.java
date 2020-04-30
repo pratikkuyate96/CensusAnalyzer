@@ -3,7 +3,7 @@ package censusanalyser;
 public class CensusAnalyserException extends Exception {
 
     enum ExceptionType {
-        CENSUS_FILE_PROBLEM
+        CENSUS_FILE_PROBLEM,INVALID_FILE_DELIMITER,CSV_WRONG_HEADER
     }
 
     ExceptionType type;
