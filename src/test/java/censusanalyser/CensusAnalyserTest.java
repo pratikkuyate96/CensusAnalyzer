@@ -9,7 +9,7 @@ public class CensusAnalyserTest {
     private static final String INDIA_CENSUS_CSV_FILE_PATH = "./src/test/resources/IndiaStateCensusData.csv";
     private static final String WRONG_CSV_FILE_PATH = "./src/main/resources/IndiaStateCensusData.csv";
     private static final String WRONG_CSV_FILE_TYPE = "./src/test/resources/IndiaStateCensusData.java";
-    private static final String WRONG_CSV_FILE_DELIMITER = "./src/test/resources/IndiaStateCensusData.java";
+    private static final String WRONG_CSV_FILE_DELIMITER = "./src/test/resources/IndiaStateCensusData.csv";
     private static final String WRONG_HEADER_FILE = "./src/test/resources/IndiaStateCode.csv";
 
     //tc1.1
@@ -70,7 +70,7 @@ public class CensusAnalyserTest {
             expectedException.expect(ClassCastException.class);
             censusAnalyser.loadIndiaCensusData(WRONG_HEADER_FILE);
         } catch (CensusAnalyserException e) {
-            Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_WRONG_HEADER, e.type);
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_WRONG_FILE, e.type);
         }
     }
 
@@ -119,7 +119,7 @@ public class CensusAnalyserTest {
             expectedException.expect(ClassCastException.class);
             censusAnalyser.loadIndiaStateCodeData(WRONG_CSV_FILE_DELIMITER);
         } catch (CensusAnalyserException e) {
-            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_WRONG_FILE, e.type);
         }
     }
 
@@ -132,7 +132,7 @@ public class CensusAnalyserTest {
             expectedException.expect(ClassCastException.class);
             censusAnalyser.loadIndiaStateCodeData(WRONG_HEADER_FILE);
         } catch (CensusAnalyserException e) {
-            Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_WRONG_HEADER, e.type);
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_WRONG_FILE, e.type);
         }
     }
 
