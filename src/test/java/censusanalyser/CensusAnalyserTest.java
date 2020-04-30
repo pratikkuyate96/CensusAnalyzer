@@ -97,19 +97,19 @@ public class CensusAnalyserTest {
         }
     }
 
-//    //tc2.3
-//    @Test
-//    public void givenStateStoreCsvFile_WhenTypeIncorrect_shouldReturnException() {
-//        try {
-//            CensusAnalyser censusAnalyser = new CensusAnalyser();
-//            ExpectedException expectedException = ExpectedException.none();
-//            expectedException.expect(ClassCastException.class);
-//            censusAnalyser.loadIndiaStateCodeData(WRONG_CSV_FILE_TYPE);
-//        } catch (CensusAnalyserException e) {
-//            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
-//        }
-//    }
-//
+    //tc2.3
+    @Test
+    public void givenStateStoreCsvFile_WhenTypeIncorrect_shouldReturnException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            ExpectedException expectedException = ExpectedException.none();
+            expectedException.expect(ClassCastException.class);
+            censusAnalyser.loadIndiaStateCodeData(WRONG_CSV_FILE_TYPE);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
+        }
+    }
+
 //    //tc2.4
 //    @Test
 //    public void givenIndiaStateCodeData_WithWrongFileDelimiter_ShouldThrowException() {
