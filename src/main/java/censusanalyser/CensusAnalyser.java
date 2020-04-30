@@ -33,22 +33,26 @@ public class CensusAnalyser {
 
     }
 
-//    public int loadIndiaStateCodeData(String csvFilePath) throws CensusAnalyserException {
-//        try {
-//            Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
-//            CsvToBeanBuilder<IndianStatesCode> csvToBeanBuilder = new CsvToBeanBuilder<>(reader);
-//            csvToBeanBuilder.withType(IndianStatesCode.class);
-//            csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
-//            CsvToBean<IndianStatesCode> csvToBean = csvToBeanBuilder.build();
-//            Iterator<IndianStatesCode> censusCSVIterator = csvToBean.iterator();;
-//            Iterable<IndianStatesCode> csvIterable = () -> censusCSVIterator;
-//            int namOfEateries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
-//            return namOfEateries;
-//        } catch (IOException e) {
-//            throw new CensusAnalyserException(e.getMessage(),
-//                    CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
-//        }
-//    }
+    public int loadIndiaStateCodeData(String csvFilePath) throws CensusAnalyserException {
+        try {
+            Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
+            CsvToBeanBuilder<IndianStatesCode> csvToBeanBuilder = new CsvToBeanBuilder<>(reader);
+            csvToBeanBuilder.withType(IndianStatesCode.class);
+            csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
+            CsvToBean<IndianStatesCode> csvToBean = csvToBeanBuilder.build();
+            Iterator<IndianStatesCode> censusCSVIterator = csvToBean.iterator();;
+            Iterable<IndianStatesCode> csvIterable = () -> censusCSVIterator;
+            int namOfEateries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
+            return namOfEateries;
+        } catch (IOException e) {
+            throw new CensusAnalyserException(e.getMessage(),
+                    CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+        }
+        catch (RuntimeException e) {
+        throw new CensusAnalyserException(e.getMessage(),
+                CensusAnalyserException.ExceptionType.CSV_WRONG_HEADER);
+    }
+  }
 
 }
 
