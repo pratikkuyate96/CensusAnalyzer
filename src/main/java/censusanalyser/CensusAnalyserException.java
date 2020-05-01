@@ -3,7 +3,7 @@ package censusanalyser;
 public class CensusAnalyserException extends Exception {
 
     enum ExceptionType {
-        CENSUS_FILE_PROBLEM,CSV_WRONG_FILE
+        CENSUS_FILE_PROBLEM,CSV_WRONG_FILE,UNABLE_TO_PARSE
     }
 
     ExceptionType type;
@@ -13,8 +13,8 @@ public class CensusAnalyserException extends Exception {
         this.type = type;
     }
 
-    public CensusAnalyserException(String message, ExceptionType type, Throwable cause) {
-        super(message, cause);
-        this.type = type;
-    }
+//    public CensusAnalyserException(String message, ExceptionType type, Throwable cause) {
+//        super(message, cause);
+//        this.type = type;
+//    }
 }
