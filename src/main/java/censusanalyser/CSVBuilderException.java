@@ -1,7 +1,6 @@
 package censusanalyser;
 
-public class CSVBuilderException extends Exception {
-
+public class CSVBuilderException extends RuntimeException {
     public enum ExceptionType {
         CENSUS_FILE_PROBLEM,CSV_WRONG_FILE,UNABLE_TO_PARSE
     }
