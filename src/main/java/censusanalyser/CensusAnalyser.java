@@ -71,11 +71,21 @@ public class CensusAnalyser {
         return sortedStateCensus;
     }
 
-    public String getPopulationWiseSortedCensusData(String csvFilePath) {
+    public String getPopulationWiseSortedCensusData(String csvFilePath)  {
         if (collect == null || collect.size() == 0) {
             throw new CensusAnalyserException("No Census data available", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
         Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.population);
+        this.sort(censusComparator);
+        String sortedStateCensus = new Gson().toJson(collect);
+        return sortedStateCensus;
+    }
+
+    public String getPopulationDensityWiseSortedCensusData(String csvFilePath) {
+        if (collect == null || collect.size() == 0) {
+            throw new CensusAnalyserException("No Census data available", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
+        }
+        Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.densityPerSqKm);
         this.sort(censusComparator);
         String sortedStateCensus = new Gson().toJson(collect);
         return sortedStateCensus;
