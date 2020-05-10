@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import java.util.stream.Collectors;
 
 public class CensusAnalyser {
+
     Map<String, IndiaCensusDAO> censusCSVMap;
     List<IndiaCensusDAO> collect = null;
 
@@ -82,4 +83,5 @@ public class CensusAnalyser {
             }
         }
     }
+    
 }
