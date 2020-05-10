@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 public class CensusAnalyser {
 
     Map<String, IndiaCensusDAO> censusCSVMap;
-    
     List<IndiaCensusDAO> collect = null;
 
     public CensusAnalyser() {
