@@ -91,6 +91,16 @@ public class CensusAnalyser {
         return sortedStateCensus;
     }
 
+    public String getPopulationAreaWiseSortedCensusData(String csvFilePath) {
+        if (collect == null || collect.size() == 0) {
+            throw new CensusAnalyserException("No Census data available", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
+        }
+        Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.areaInSqKm);
+        this.sort(censusComparator);
+        String sortedStateCensus = new Gson().toJson(collect);
+        return sortedStateCensus;
+    }
+
     private void sort(Comparator <IndiaCensusDAO> censusComparator) {
         for (int i = 0; i < collect.size() - 1; i++) {
             for (int j = 0; j < collect.size() - 1 - i; j++) {
