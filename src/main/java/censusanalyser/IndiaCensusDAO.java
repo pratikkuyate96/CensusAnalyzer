@@ -7,7 +7,7 @@ public class IndiaCensusDAO
     public int densityPerSqKm;
     public int population;
 
-    public IndiaCensusDAO(IndiaCensusCSV next)
+    public IndiaCensusDAO (IndiaCensusCSV next)
     {
         state=next.state;
         areaInSqKm=next.areaInSqKm;
