@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 public class CensusAnalyser {
 
     Map<String, IndiaCensusDAO> censusCSVMap;
-    
     List<IndiaCensusDAO> collect = null;
 
     public CensusAnalyser() {
@@ -25,7 +24,7 @@ public class CensusAnalyser {
             Iterator<IndiaCensusCSV> censusCSVIterator = csvBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
             while (censusCSVIterator.hasNext()) {
                 IndiaCensusCSV indiaCensusCSV = censusCSVIterator.next();
-                censusCSVMap.put(indiaCensusCSV.state, new IndiaCensusDAO(indiaCensusCSV));
+                censusCSVMap.put(indiaCensusCSV.state, new  IndiaCensusDAO(indiaCensusCSV));
             }
 
             collect = censusCSVMap.values().stream().collect(Collectors.toList());
