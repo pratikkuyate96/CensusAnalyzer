@@ -65,13 +65,23 @@ public class CensusAnalyser {
             throw new CensusAnalyserException("No Census data available", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
 
-        Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.state);
+        Comparator <IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.state);
         this.sort(censusComparator);
         String sortedStateCensus = new Gson().toJson(collect);
         return sortedStateCensus;
     }
 
-    private void sort(Comparator<IndiaCensusDAO> censusComparator) {
+    public String getPopulationWiseSortedCensusData(String csvFilePath) {
+        if (collect == null || collect.size() == 0) {
+            throw new CensusAnalyserException("No Census data available", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
+        }
+        Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.population);
+        this.sort(censusComparator);
+        String sortedStateCensus = new Gson().toJson(collect);
+        return sortedStateCensus;
+    }
+
+    private void sort(Comparator <IndiaCensusDAO> censusComparator) {
         for (int i = 0; i < collect.size() - 1; i++) {
             for (int j = 0; j < collect.size() - 1 - i; j++) {
                 IndiaCensusDAO census1 = collect.get(j);
@@ -83,5 +93,5 @@ public class CensusAnalyser {
             }
         }
     }
-    
+
 }

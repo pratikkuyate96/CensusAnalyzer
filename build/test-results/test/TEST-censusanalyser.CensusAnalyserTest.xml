@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="censusanalyser.CensusAnalyserTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-05-10T12:26:36" hostname="HP" time="1.277">
+<testsuite name="censusanalyser.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-10T13:21:10" hostname="HP" time="0.22">
   <properties/>
-  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.741"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnStateCode_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.057"/>
-  <testcase name="givenIndiaCensusCodeData_WithWrongFileDelimiter_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.076"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.063"/>
-  <testcase name="givenIndianStoreCSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.012"/>
-  <testcase name="givenIndiaStoreData_WithWrongFile_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.007"/>
-  <testcase name="givenStateStoreCsvFile_WhenTypeIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.007"/>
-  <testcase name="givenStateCensusCsvFile_WhenTypeIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.007"/>
-  <testcase name="givenIndiaStateCodeData_WithWrongFileDelimiter_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.013"/>
-  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.007"/>
-  <testcase name="givenStateCensusCsvFile_WhenHeaderIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.071"/>
-  <testcase name="givenStateStoreCsvFile_WhenHeaderIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.04"/>
+  <testcase name="givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnResult" classname="censusanalyser.CensusAnalyserTest" time="0.22"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -163,4 +163,18 @@ public class CensusAnalyserTest {
         }
     }
 
+    @Test
+
+    public void givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnResult() {
+        try {
+            CensusAnalyser censusAnalyzer = new CensusAnalyser();
+            censusAnalyzer.loadIndiaStateCodeData(INDIA_CENSUS_CSV_FILE_PATH);
+            String sortedCensusData = censusAnalyzer.getPopulationWiseSortedCensusData(INDIA_CENSUS_CSV_FILE_PATH);
+            IndiaCensusCSV[] censusCsv = new Gson().fromJson(sortedCensusData, IndiaCensusCSV[].class);
+            Assert.assertEquals("Sikkim", censusCsv[0].state);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_WRONG_FILE, e.type);
+        }
+    }
+
 }
