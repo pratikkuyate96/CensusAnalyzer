@@ -177,7 +177,7 @@ public class CensusAnalyserTest {
     }
 
     @Test
-    public void givenIndiaCensusData_WhenSortedOnDensity_ShouldReturnResult() {
+    public void givenIndiaCensusData_WhenSortedOnlDensity_ShouldReturnResult() {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
             censusAnalyser.loadIndiaStateCodeData(INDIA_CENSUS_CSV_FILE_PATH);
@@ -190,7 +190,6 @@ public class CensusAnalyserTest {
     }
 
     @Test
-
     public void givenIndiaCensusData_WhenSortedByArea_ShouldReturnResult() {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
@@ -199,7 +198,7 @@ public class CensusAnalyserTest {
             IndiaCensusCSV[] censusCsv = new Gson().fromJson(sortedCensusData, IndiaCensusCSV[].class);
             Assert.assertEquals("Goa", censusCsv[0].state);
         } catch (CensusAnalyserException e) {
-            e.printStackTrace();
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CSV_WRONG_FILE, e.type);
         }
     }
 
