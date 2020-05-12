@@ -10,23 +10,22 @@ public class USCensusCSV {
     public String stateId;
 
     @CsvBindByName(column = "Population", required = true)
-    public int population;
+    public double population;
 
-    @CsvBindByName(column = "AreaInSqKm", required = true)
-    public int areaInSqKm;
+    @CsvBindByName(column = "Total area", required = true)
+    public double totalArea;
 
-    @CsvBindByName(column = "DensityPerSqKm", required = true)
-    public int densityPerSqKm;
+    @CsvBindByName(column = "  Population Density", required = true)
+    public double populationDensity;
 
     @Override
     public String toString() {
-        return "USCensusCSV{" +
-                "State='" + state + '\'' +
+        return "UsCensusCSV{" +
+                "state='" + state + '\'' +
                 ", stateId=" + stateId +
-                ", Population='" + population + '\'' +
-                ", AreaInSqKm='" + areaInSqKm + '\'' +
-                ", DensityPerSqKm='" + densityPerSqKm + '\'' +
+                ", population=" + population +
+                ", totalArea=" + totalArea +
+                ", populationDensity=" + populationDensity +
                 '}';
     }
-
 }
