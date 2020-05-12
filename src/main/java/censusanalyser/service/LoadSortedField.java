@@ -6,6 +6,7 @@ import java.util.*;
 public class LoadSortedField {
 
         Map<SortedField, Comparator<IndiaCensusDAO>> sortedMap;
+
         public LoadSortedField() {
             this.sortedMap = new HashMap<>();
             this.sortedMap.put(SortedField.STATE, Comparator.comparing(census -> census.state));

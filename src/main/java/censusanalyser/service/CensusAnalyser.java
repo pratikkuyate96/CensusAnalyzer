@@ -30,7 +30,10 @@ public class CensusAnalyser {
 
     public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException {
         return this.loadCensusData(csvFilePath, IndiaCensusCSV.class);
+    }
 
+    public int loadUSCensusData(String csvFilePath) {
+        return this.loadCensusData(csvFilePath, USCensusCSV.class);
     }
 
     private <E> int loadCensusData(String csvFilePath, Class<E> censusCSVClass) {
@@ -54,10 +57,6 @@ public class CensusAnalyser {
         } catch (RuntimeException e) {
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.CSV_WRONG_FILE);
         }
-    }
-
-    public int loadUSCensusData(String csvFilePath) {
-        return this.loadCensusData(csvFilePath, USCensusCSV.class);
     }
 
     public int loadIndiaStateCodeData(String csvFilePath) {
