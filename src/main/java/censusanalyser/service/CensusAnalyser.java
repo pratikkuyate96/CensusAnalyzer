@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 import censusanalyser.DAOFile.IndiaCensusDAO;
+import censusanalyser.adapter.AdapterFactory;
 import censusanalyser.csvFiles.IndiaCensusCSV;
 import censusanalyser.csvFiles.IndianStatesCode;
 import censusanalyser.csvFiles.USCensusCSV;
@@ -19,6 +20,8 @@ import java.util.stream.StreamSupport;
 
 public class CensusAnalyser {
 
+    public enum Country {INDIA, US}
+
     List<IndiaCensusDAO> list;
     Map<String, IndiaCensusDAO> censusCSVMap;
 
@@ -28,17 +31,17 @@ public class CensusAnalyser {
         this.censusCSVMap = new HashMap<>();
     }
 
-    public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException {
-        return this.loadCensusData(csvFilePath, IndiaCensusCSV.class);
-    }
-
-    public int loadUSCensusData(String csvFilePath) {
-        return this.loadCensusData(csvFilePath, USCensusCSV.class);
-    }
-
-    public int loadUSCensusData(String csvFilePath) {
-        return this.loadCensusData(csvFilePath, USCensusCSV.class);
-    }
+    public int loadIndiaCensusData(Country country, String... csvFilePath) throws CensusAnalyserException {
+        censusCSVMap = AdapterFactory.getCensusData(country, csvFilePath);
+        return censusCSVMap.size();    }
+//
+//    public int loadUSCensusData(String csvFilePath) {
+//        return this.loadCensusData(csvFilePath, USCensusCSV.class);
+//    }
+//
+//    public int loadUSCensusData(String csvFilePath) {
+//        return this.loadCensusData(csvFilePath, USCensusCSV.class);
+//    }
     
     private <E> int loadCensusData(String csvFilePath, Class<E> censusCSVClass) {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {

@@ -1,6 +1,7 @@
 package censusanalyser;
 
 import censusanalyser.csvFiles.IndiaCensusCSV;
+import censusanalyser.csvFiles.USCensusCSV;
 import censusanalyser.exception.CensusAnalyserException;
 import censusanalyser.service.CensusAnalyser;
 import censusanalyser.service.SortedField;
@@ -194,13 +195,25 @@ public class CensusAnalyserTest {
         }
     }
 
-
     @Test
     public void givenUSCensusCSVFileReturnsCorrectRecords() {
         try {
-            CensusAnalyser censusAnalyzer = new CensusAnalyser();
-            int numberOfRecord = censusAnalyzer.loadUSCensusData(US_CENSUS_FILE);
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            int numberOfRecord = censusAnalyser.loadCensusData(US_CENSUS_FILE);
             Assert.assertEquals(51, numberOfRecord);
+        } catch (CensusAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenUsCensusData_WhenSorted_ShouldReturnCorrectResult() {
+        try {
+            CensusAnalyser censusAnalyzer = new CensusAnalyser();
+            censusAnalyzer.loadCensusData(CensusAnalyser.Country.US, US_CENSUS_FILE);
+            String sortedCensusData = censusAnalyzer.getSortedCensusData(SortedField.POPULATION);
+            USCensusCSV[] censusCsv = new Gson().fromJson(sortedCensusData, USCensusCSV[].class);
+            Assert.assertEquals("California", censusCsv[0].state);
         } catch (CensusAnalyserException e) {
             e.printStackTrace();
         }
