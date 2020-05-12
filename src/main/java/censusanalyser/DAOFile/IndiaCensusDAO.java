@@ -1,4 +1,6 @@
-package censusanalyser;
+package censusanalyser.DAOFile;
+
+import censusanalyser.csvFiles.IndiaCensusCSV;
 
 public class  IndiaCensusDAO
 {
@@ -7,11 +9,13 @@ public class  IndiaCensusDAO
     public int densityPerSqKm;
     public int population;
 
+
     public IndiaCensusDAO(IndiaCensusCSV next)
     {
         state=next.state;
         areaInSqKm=next.areaInSqKm;
         densityPerSqKm=next.densityPerSqKm;
         population=next.population;
+
     }
 }
