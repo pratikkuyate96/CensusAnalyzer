@@ -27,6 +27,7 @@ public abstract class Adapter {
             ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
             Iterator<E> censusCsvIterator = icsvBuilder.getCSVFileIterator(reader, censusCsvClass);
             Iterable<E> csvIterable = () -> censusCsvIterator;
+
             if (censusCsvClass.getName().equals("IndiaCensusCSV")) {
                 StreamSupport.stream(csvIterable.spliterator(), false)
                         .map(IndiaCensusCSV.class::cast)
@@ -36,6 +37,7 @@ public abstract class Adapter {
                         .map(USCensusCSV.class::cast)
                         .forEach(censusCsv -> censusMap.put(censusCsv.state, new IndiaCensusDAO(censusCsv)));
             }
+            
             return censusMap;
         } catch (IOException e) {
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
