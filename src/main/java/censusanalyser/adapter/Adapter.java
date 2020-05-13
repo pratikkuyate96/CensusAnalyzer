@@ -27,6 +27,7 @@ public abstract class Adapter {
             ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
             Iterator<E> censusCsvIterator = icsvBuilder.getCSVFileIterator(reader, censusCsvClass);
             Iterable<E> csvIterable = () -> censusCsvIterator;
+
             if (censusCsvClass.getName().equals("IndiaCensusCSV")) {
                 StreamSupport.stream(csvIterable.spliterator(), false)
                         .map(IndiaCensusCSV.class::cast)

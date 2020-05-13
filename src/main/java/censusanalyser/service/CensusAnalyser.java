@@ -19,9 +19,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 public class CensusAnalyser {
-
     public enum Country {INDIA, US}
-
     List<IndiaCensusDAO> list;
     Map<String, IndiaCensusDAO> censusCSVMap;
 
