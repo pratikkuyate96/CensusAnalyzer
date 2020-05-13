@@ -13,16 +13,14 @@ public class  IndiaCensusDAO
     public String stateCode;
     public double populationDensity;
 
-    public IndiaCensusDAO(IndiaCensusCSV next)
-    {
+    public IndiaCensusDAO(IndiaCensusCSV next) {
         state=next.state;
         areaInSqKm=next.areaInSqKm;
         densityPerSqKm=next.densityPerSqKm;
         population=next.population;
     }
 
-    public IndiaCensusDAO(USCensusCSV next)
-    {
+    public IndiaCensusDAO(USCensusCSV next) {
         state = next.state;
         stateCode = next.stateId;
         population = next.population;
