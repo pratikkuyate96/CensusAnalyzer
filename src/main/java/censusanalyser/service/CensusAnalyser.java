@@ -31,7 +31,7 @@ public class CensusAnalyser {
         this.censusCSVMap = new HashMap<>();
     }
 
-    public int loadIndiaCensusData(Country country, String... csvFilePath) throws CensusAnalyserException {
+    public int loadCensusData(Country country, String... csvFilePath) throws CensusAnalyserException {
         censusCSVMap = AdapterFactory.getCensusData(country, csvFilePath);
         return censusCSVMap.size();    }
 //
