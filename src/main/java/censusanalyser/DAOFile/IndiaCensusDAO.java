@@ -2,9 +2,9 @@ package censusanalyser.DAOFile;
 
 import censusanalyser.csvFiles.IndiaCensusCSV;
 import censusanalyser.csvFiles.USCensusCSV;
+import censusanalyser.service.CensusAnalyser;
 
-public class  IndiaCensusDAO
-{
+public class  IndiaCensusDAO {
     public double totalArea;
     public String state;
     public int areaInSqKm;
@@ -27,5 +27,11 @@ public class  IndiaCensusDAO
         totalArea = next.totalArea;
         densityPerSqKm = next.totalArea;
         populationDensity = next.populationDensity;
+    }
+
+    public Object getCensusDTO(CensusAnalyser.Country country) {
+        if(country.equals( CensusAnalyser.Country.INDIA ))
+            return new IndiaCensusCSV(state,(int)population,(int)populationDensity,(int)totalArea);
+        return new USCensusCSV(state,stateCode,(int)population,populationDensity,totalArea);
     }
 }

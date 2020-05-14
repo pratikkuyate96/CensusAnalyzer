@@ -2,7 +2,6 @@ package censusanalyser.adapter;
 
 import censusanalyser.DAOFile.IndiaCensusDAO;
 import censusanalyser.csvFiles.USCensusCSV;
-
 import java.util.Map;
 
 public class USCensusAdapter extends Adapter {

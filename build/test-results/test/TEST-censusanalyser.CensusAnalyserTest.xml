@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="censusanalyser.CensusAnalyserTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-05-13T05:52:29" hostname="HP" time="1.241">
+<testsuite name="censusanalyser.CensusAnalyserTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-05-14T16:44:30" hostname="HP" time="1.214">
   <properties/>
-  <testcase name="givenUsCensusData_WhenSortedArea_ShouldReturnCorrectResult" classname="censusanalyser.CensusAnalyserTest" time="0.339"/>
-  <testcase name="givenIndiaCensusData_WhenSortedOnlDensity_ShouldReturnResult" classname="censusanalyser.CensusAnalyserTest" time="0.188"/>
-  <testcase name="givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnResult" classname="censusanalyser.CensusAnalyserTest" time="0.098"/>
-  <testcase name="givenUsCensusData_WhenSortedPopulationDensity_ShouldReturnCorrectResult" classname="censusanalyser.CensusAnalyserTest" time="0.131"/>
-  <testcase name="givenIndianCensusCSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.032"/>
-  <testcase name="givenIndiaCensusData_WhenSortedByArea_ShouldReturnResult" classname="censusanalyser.CensusAnalyserTest" time="0.028"/>
-  <testcase name="givenUsCensusData_WhenSortedPopulation_ShouldReturnCorrectResult" classname="censusanalyser.CensusAnalyserTest" time="0.03"/>
-  <testcase name="givenIndiaCensusCodeData_WithWrongFileDelimiter_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.033"/>
-  <testcase name="givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.027"/>
-  <testcase name="givenIndianStoreCSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.008"/>
-  <testcase name="givenIndiaStoreData_WithWrongFile_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.008"/>
-  <testcase name="givenUSCensusCSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.011"/>
-  <testcase name="givenStateStoreCsvFile_WhenTypeIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.115"/>
-  <testcase name="givenStateCensusCsvFile_WhenTypeIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.029"/>
-  <testcase name="givenIndiaStateCodeData_WithWrongFileDelimiter_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.028"/>
-  <testcase name="givenIndianCensusData_WhenSortOnPopulationWithDensity_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.066"/>
-  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.01"/>
-  <testcase name="givenStateCensusCsvFile_WhenHeaderIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.009"/>
-  <testcase name="givenUSCensusData_WhenSortOnPopulationWithDensity_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.004"/>
-  <testcase name="givenStateStoreCsvFile_WhenHeaderIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.005"/>
+  <testcase name="givenUsCensusData_WhenSortedArea_ShouldReturnCorrectResult" classname="censusanalyser.CensusAnalyserTest" time="0.369"/>
+  <testcase name="givenIndiaCensusData_WhenSortedOnlDensity_ShouldReturnResult" classname="censusanalyser.CensusAnalyserTest" time="0.08"/>
+  <testcase name="givenIndiaCensusData_WhenSortedOnPopulation_ShouldReturnResult" classname="censusanalyser.CensusAnalyserTest" time="0.005"/>
+  <testcase name="givenUsCensusData_WhenSortedPopulationDensity_ShouldReturnCorrectResult" classname="censusanalyser.CensusAnalyserTest" time="0.047"/>
+  <testcase name="givenIndianCensusCSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.007"/>
+  <testcase name="givenIndiaCensusData_WhenSortedByArea_ShouldReturnResult" classname="censusanalyser.CensusAnalyserTest" time="0.003"/>
+  <testcase name="givenUsCensusData_WhenSortedPopulation_ShouldReturnCorrectResult" classname="censusanalyser.CensusAnalyserTest" time="0.149"/>
+  <testcase name="givenIndiaCensusCodeData_WithWrongFileDelimiter_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.046"/>
+  <testcase name="givenIndianCensusData_WhenSortedOnState_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.004"/>
+  <testcase name="givenIndianStoreCSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.006"/>
+  <testcase name="givenIndiaStoreData_WithWrongFile_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.002"/>
+  <testcase name="givenUSCensusCSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.098"/>
+  <testcase name="givenStateStoreCsvFile_WhenTypeIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.003"/>
+  <testcase name="givenStateCensusCsvFile_WhenTypeIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.002"/>
+  <testcase name="givenIndiaStateCodeData_WithWrongFileDelimiter_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.004"/>
+  <testcase name="givenIndianCensusData_WhenSortOnPopulationWithDensity_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.302"/>
+  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.002"/>
+  <testcase name="givenStateCensusCsvFile_WhenHeaderIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.003"/>
+  <testcase name="givenUSCensusData_WhenSortOnPopulationWithDensity_ShouldReturnSortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.019"/>
+  <testcase name="givenStateStoreCsvFile_WhenHeaderIncorrect_shouldReturnException" classname="censusanalyser.CensusAnalyserTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 	at censusanalyser.adapter.Adapter.loadCensusData(Adapter.java:45)
 	at censusanalyser.adapter.USCensusAdapter.loadCensusData(USCensusAdapter.java:14)
-	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:14)
-	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:35)
+	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:16)
+	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:37)
 	at censusanalyser.CensusAnalyserTest.givenUsCensusData_WhenSortedArea_ShouldReturnCorrectResult(CensusAnalyserTest.java:239)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -78,8 +78,8 @@
 censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 	at censusanalyser.adapter.Adapter.loadCensusData(Adapter.java:45)
 	at censusanalyser.adapter.USCensusAdapter.loadCensusData(USCensusAdapter.java:14)
-	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:14)
-	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:35)
+	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:16)
+	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:37)
 	at censusanalyser.CensusAnalyserTest.givenUsCensusData_WhenSortedPopulationDensity_ShouldReturnCorrectResult(CensusAnalyserTest.java:226)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -131,8 +131,8 @@ censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 	at censusanalyser.adapter.Adapter.loadCensusData(Adapter.java:45)
 	at censusanalyser.adapter.USCensusAdapter.loadCensusData(USCensusAdapter.java:14)
-	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:14)
-	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:35)
+	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:16)
+	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:37)
 	at censusanalyser.CensusAnalyserTest.givenUsCensusData_WhenSortedPopulation_ShouldReturnCorrectResult(CensusAnalyserTest.java:213)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -184,8 +184,8 @@ censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 	at censusanalyser.adapter.Adapter.loadCensusData(Adapter.java:45)
 	at censusanalyser.adapter.USCensusAdapter.loadCensusData(USCensusAdapter.java:14)
-	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:14)
-	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:35)
+	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:16)
+	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:37)
 	at censusanalyser.CensusAnalyserTest.givenUSCensusCSVFile_ReturnsCorrectRecords(CensusAnalyserTest.java:202)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -234,11 +234,11 @@ censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
-	at censusanalyser.adapter.IndiaCensusAdapter.loadStateCodeData(IndiaCensusAdapter.java:46)
-	at censusanalyser.adapter.IndiaCensusAdapter.loadCensusData(IndiaCensusAdapter.java:28)
-	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:12)
-	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:35)
+censusanalyser.exception.CensusAnalyserException: java.lang.InstantiationException: censusanalyser.csvFiles.IndiaCensusCSV
+	at censusanalyser.adapter.Adapter.loadCensusData(Adapter.java:45)
+	at censusanalyser.adapter.IndiaCensusAdapter.loadCensusData(IndiaCensusAdapter.java:27)
+	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:14)
+	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:37)
 	at censusanalyser.CensusAnalyserTest.givenIndianCensusData_WhenSortOnPopulationWithDensity_ShouldReturnSortedResult(CensusAnalyserTest.java:252)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -290,8 +290,8 @@ censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 censusanalyser.exception.CensusAnalyserException: Error capturing CSV header!
 	at censusanalyser.adapter.Adapter.loadCensusData(Adapter.java:45)
 	at censusanalyser.adapter.USCensusAdapter.loadCensusData(USCensusAdapter.java:14)
-	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:14)
-	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:35)
+	at censusanalyser.adapter.AdapterFactory.getCensusData(AdapterFactory.java:16)
+	at censusanalyser.service.CensusAnalyser.loadCensusData(CensusAnalyser.java:37)
 	at censusanalyser.CensusAnalyserTest.givenUSCensusData_WhenSortOnPopulationWithDensity_ShouldReturnSortedResult(CensusAnalyserTest.java:265)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

@@ -3,7 +3,7 @@ package censusanalyser.adapter;
 import censusanalyser.DAOFile.IndiaCensusDAO;
 import censusanalyser.exception.CensusAnalyserException;
 import censusanalyser.service.CensusAnalyser;
-
+import java.util.Comparator;
 import java.util.Map;
 
 public class AdapterFactory {
@@ -14,4 +14,28 @@ public class AdapterFactory {
             return new USCensusAdapter().loadCensusData(csvFilePath);
         throw new CensusAnalyserException("Invalid Country", CensusAnalyserException.ExceptionType.INVALID_COUNTRY);
     }
+
+    public Comparator<IndiaCensusDAO> getCurrentSort(String field) {
+
+        Comparator<IndiaCensusDAO> comparator = null;
+        switch (field) {
+            case "population":
+                comparator = Comparator.comparing( census -> census.population );
+                break;
+            case "density":
+                comparator = Comparator.comparing( census -> census.populationDensity );
+                break;
+            case "area":
+                comparator = Comparator.comparing( census -> census.totalArea );
+                break;
+            case "state":
+                comparator = Comparator.comparing( census -> census.state );
+                break;
+            case "statecode":
+                comparator = Comparator.comparing( census -> census.stateCode );
+                break;
+        }
+        return comparator;
+    }
+
 }
